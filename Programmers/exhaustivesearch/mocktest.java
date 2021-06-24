@@ -3,12 +3,15 @@ package Programmers.exhaustivesearch;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//이거 틀렸다느데?
 public class mocktest {
     public int []solution(int[]answers){
 
         int []a ={1,2,3,4,5};
         int []b ={2,1,2,3,2,4,2,5};
         int []c ={3,3,1,1,2,2,4,4,5,5};
+
         //아래 생각 못함
         int[]cnt = new int[3];
 
@@ -17,10 +20,10 @@ public class mocktest {
            if (answers[i] == a[i%5]){
                    cnt[0]++;
             }
-            if (answers[i] == b[i%5]){
+            if (answers[i] == b[i%8]){
                 cnt[1]++;
             }
-            if (answers[i] == c[i%5]){
+            if (answers[i] == c[i%10]){
                 cnt[2]++;
             }
         }
