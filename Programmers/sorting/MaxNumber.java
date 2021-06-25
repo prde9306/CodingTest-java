@@ -49,7 +49,7 @@ public class MaxNumber {
 
         // 내림차순이니까0부터시작하면 0000
         // 0만 여러개 있는 배열의 경우 하나의 0만 리턴
-        if(result[0].equals("0")) {
+        if (result[0].equals("0")) {
             return "0";
         }
         String answer = "";
@@ -59,7 +59,9 @@ public class MaxNumber {
         }
         return answer;
     }
+}
 
+/**
     //sol2
     //이렇게 하는 건 안되나? 될거 같은데?
 
@@ -67,17 +69,13 @@ public class MaxNumber {
         //이중배열에 경우의수 모두 나열
         //[[1,2,3],[3,2,1]]
         //[123,321]
-        //
-        for(int i=1; i<=numbers.length; i++){
-            int a = i*(i+1);
-            //팩토리얼 어떻게 구해
 
+        //펙토리얼 구하기
+
+        int a = 1;
+        for (int i = numbers.length; i >= numbers.length; i--) {
+            a = a * i;
         }
-        int [][]twoarray = new array()
 
-
-        String answer=String.valueOf(max(array));
-        String answer = "";
-        return answer;
-    }
 }
+ **/

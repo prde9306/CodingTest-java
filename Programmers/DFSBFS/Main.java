@@ -1,4 +1,4 @@
-package Programmers.dfsbfs;
+package Programmers.DFSBFS;
 
 //단어 변환
 public class Main {

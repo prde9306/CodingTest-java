@@ -1,4 +1,4 @@
-package Programmers.dfsbfs;
+package Programmers.DFSBFS;
 //여행 경로
 import java.util.ArrayList;
 import java.util.Collections;
