@@ -24,6 +24,8 @@ import java.util.*;
 
 import java.util.*;
 class TargetNumber {
+
+    //sol1
     static int[] number;
     static int answer = 0;
     static int target_num;
@@ -46,4 +48,22 @@ class TargetNumber {
         dfs(level+1,sum+minus_num);
         dfs(level+1,sum+num);
     }
+
+    //sol2
+    public int solution2(int[] numbers2, int target2) {
+        int answer = 0;
+        answer = dfs(numbers2, 0, 0, target2);
+        return answer;
+    }
+    int dfs(int[] numbers2, int level2, int sum, int target2) {
+        if(level2 == numbers2.length) {
+            if(sum == target2) {
+                return 1;
+            }
+            return 0;
+        }
+        return dfs(numbers2, level2 + 1, sum + numbers2[level2], target2) +
+                dfs(numbers2, level2 + 1, sum - numbers2[level2], target2);
+    }
+
 }
