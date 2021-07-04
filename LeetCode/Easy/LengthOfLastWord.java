@@ -1,5 +1,8 @@
 package LeetCode.Easy;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class LengthOfLastWord {
     //sol1
     //공백도 문자로 인식한다, 거꾸로 for문, 배열길이vs, String길이

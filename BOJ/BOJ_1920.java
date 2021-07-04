@@ -49,7 +49,7 @@ public class BOJ_1920 {
         }
 
     }
-    //sol1
+    //sol1, hashSet이용
     public static void main3(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
        // int n = Integer.parseInt(br.readLine());
@@ -60,7 +60,7 @@ public class BOJ_1920 {
         int m = Integer.parseInt(br.readLine());
         String[] arrM = br.readLine().split(" ");
         for (int i=0; i<m; i++) {
-
+            //contains사용
             if (hs.contains(arrM[i])) {
                 System.out.println(1);
             } else {
