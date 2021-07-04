@@ -1,4 +1,4 @@
-package BOJ;
+package BOJ.SearchSort;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class BOJ_2751 {
     public static void main(String[]args) throws IOException {
-//Java기준 Arrays.sort 로 쓰면 시간초과가 난다.   (2021.01.11 Java → Java8 명칭이 변경됨)
+        //Java기준 Arrays.sort 로 쓰면 시간초과가 난다.   (2021.01.11 Java → Java8 명칭이 변경됨)
         //sol1. Scanner + Collection.sort()
         Scanner in = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
