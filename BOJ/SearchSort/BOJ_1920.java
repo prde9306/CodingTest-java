@@ -104,6 +104,7 @@ public class BOJ_1920 {
 
         int m = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
+
         for(int i = 0; i < m; i++) {
             int target = Integer.parseInt(st.nextToken());
             if(bSearch(arr, target)) {
