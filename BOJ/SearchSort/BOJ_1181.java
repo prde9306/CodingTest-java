@@ -44,7 +44,7 @@ public class BOJ_1181 {
     }
 
         //sol2 BufferedReader + StringBuilder
-        public static void main3(String[] args) throws IOException {
+        public static void main2(String[] args) throws IOException {
 
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
