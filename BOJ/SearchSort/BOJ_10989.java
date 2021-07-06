@@ -10,6 +10,7 @@ import java.util.Scanner;
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
 public class BOJ_10989 {
+    //sol1. BufferedReader, Arrays.sort()
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
@@ -29,4 +30,7 @@ public class BOJ_10989 {
 
         System.out.println(sb);
     }
+
+    //sol2.
+    
 }

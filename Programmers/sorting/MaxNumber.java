@@ -60,22 +60,3 @@ public class MaxNumber {
         return answer;
     }
 }
-
-/**
-    //sol2
-    //이렇게 하는 건 안되나? 될거 같은데?
-
-    public String solution2(int[] numbers) {
-        //이중배열에 경우의수 모두 나열
-        //[[1,2,3],[3,2,1]]
-        //[123,321]
-
-        //펙토리얼 구하기
-
-        int a = 1;
-        for (int i = numbers.length; i >= numbers.length; i--) {
-            a = a * i;
-        }
-
-}
- **/
