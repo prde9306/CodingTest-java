@@ -107,5 +107,3 @@ public class BOJ_10815 {
             return -1;
         }
     }
-
-}
