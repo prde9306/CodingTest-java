@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class BOJ_6603 {
+    //dfs 안에 어떻게 돌아가는지 이해 아직 계속
     static int N;
     static int[] arr;
     static boolean[]result;
