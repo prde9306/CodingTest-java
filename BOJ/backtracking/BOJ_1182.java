@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BOJ_1182 {
     static int N, S, count=0;
     static int[] arr;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         N= sc.nextInt();
