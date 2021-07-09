@@ -24,11 +24,5 @@ public class BOJ_9095 {
 
             System.out.println(dp[n]);
         }
-
-
-
-
-
     }
-
 }
