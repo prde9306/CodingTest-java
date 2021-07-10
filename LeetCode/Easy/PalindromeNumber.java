@@ -50,10 +50,10 @@ public class PalindromeNumber {
 
     }
 
-    //sol2 striong으로 형변환 해서
+    //sol2 striong으로 형변환 해서 //대칭을 이용했네
     public boolean isPalindrome2(int x) {
         if(x<0) return false;
-        String ispalin=Integer.toString(x);
+        String ispalin = Integer.toString(x);
         int lindex=ispalin.length()-1;
 
         int findex=0;
