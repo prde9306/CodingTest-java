@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //sol1 새로운 함수를 만들어야
-
+//근데 시간초과인데?
 public class LongestSubstringWithoutRepetingCharcters {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
