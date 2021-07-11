@@ -1,10 +1,12 @@
 package LeetCode.Easy;
 
 public class LongestCommonPrefix {
-    //sol1, indexOf정확히 암기
+    //sol1, indexOf정확히 암기, subString도 정확히
     public String longestCommonPrefix(String[] strs) {
             String prefix="";
-            if(strs.length == 0) return prefix;
+            if(strs.length == 0)
+                return prefix;
+
             prefix = strs[0];
 
             for(int i=1; i<strs.length; i++){
