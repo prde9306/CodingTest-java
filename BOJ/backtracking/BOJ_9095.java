@@ -3,7 +3,7 @@ package BOJ.backtracking;
 import java.util.Scanner;
 
 public class BOJ_9095 {
-
+    //이 문제는 완전 규칙찾는 수열과 동일
     static int dp[] = new int [11];
 
     public static void main(String[] args)   {
