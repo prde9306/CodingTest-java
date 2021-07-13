@@ -1,7 +1,6 @@
 package Programmers.stackqueue;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 문제 설명
@@ -36,7 +35,7 @@ import java.util.Queue;
 public class printer {
     //sol1 printer 객체 생성
     //Queue 이용 -> offer, poll
-    public int solution(int[] priorities, int location) {
+    public int solution1(int[] priorities, int location) {
 
         int answer = 0;
         Queue<Printer> q = new LinkedList<>();
@@ -56,6 +55,7 @@ public class printer {
             }
 
             if (flag) {
+                //맨앞에껄 맨뒤로
                 q.offer(q.poll());
             } else {// 현재 맨앞의 숫자가 가장 클 때
                 if (q.poll().location == location) {
@@ -73,6 +73,31 @@ public class printer {
             this.location = location;
             this.prior = prior;
         }
+    }
+    //우선순위 큐
+
+
+    public int solution2(int[]priorities, int location){
+        int answer =0;
+        //우선순위가 높은 숫자 순
+       PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        //우선순위 큐에 집어넣고
+        for(int priority: priorities){
+            pq.offer(priority);
+        }
+        while (!pq.isEmpty()){
+            for(int i=0; i<priorities.length; i++){
+                if(pq.peek()==priorities[i]){
+                    pq.poll();
+                    answer++;
+                    if(location==i){
+                        pq.clear();
+                        break;
+                    }
+                }
+            }
+        }
+        return answer;
     }
 
 }
