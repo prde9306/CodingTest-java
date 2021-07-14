@@ -17,7 +17,14 @@ public class BOJ_15686 {
        int M = sc.nextInt();
 
        //집 위치를  찾는 함수(좌표를 리턴)
-       public static int[][] findHome(){
+       public static int[][] findHome(int i, int j){
+           for(int i=0; i<N; i++ ){
+               for(int j=0; j<N; j++){
+
+               }
+           }
+
+           return int[][];
 
        }
 
