@@ -15,6 +15,7 @@ public class BOJ_9012 {
         }
 
     }
+
     public static String solve(String s){
         Stack<Character> stack = new Stack<>();
 
