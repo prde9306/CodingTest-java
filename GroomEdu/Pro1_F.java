@@ -19,8 +19,6 @@ public class Pro1_F {
                 return i;
         }
         return -1;
-
-
     }
 
     public static void main(String[] args)
