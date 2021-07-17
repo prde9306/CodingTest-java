@@ -22,7 +22,8 @@ public class BOJ_2667 {
         //전체 사각형 입력 받기
         for(int i=0; i<n; i++){
             String input = sc.next();
-            //한 줄씩 가져오는 듯? String으로 가져와?
+
+            //next(), nextLine(), nextInt()
 
             for(int j=0; j<n; j++){
                 map[i][j] = input.charAt(j)-'0';
@@ -68,4 +69,3 @@ public class BOJ_2667 {
 }
 
 
-}
