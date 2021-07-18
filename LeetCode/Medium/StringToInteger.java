@@ -43,10 +43,4 @@ public class StringToInteger {
         return sign * ans;
     }
 
-    public int myAtoi2(String str){
-        if(str ==null || str.isEmpty())
-            return 0;
-        //sign = finalresult의 sign i =index, n = string길이
-        int sign =1, i=0, n=str.length();
-    }
 }

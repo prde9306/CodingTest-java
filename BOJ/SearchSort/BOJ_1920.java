@@ -11,35 +11,26 @@ import java.util.StringTokenizer;
 public class BOJ_1920 {
     //BufferedReader와 Scanner차이 명확히 알기
 
-    public static void main(String[] args) {
-
-        int num1 = 0 ;
-        int num2 = 0;
-
+    //sol1
+    //출력초과
+    public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("첫번쨰 정수 : ");
-        num1 = sc.nextInt();
-        System.out.print("두번쨰 정수 : ");
-        num2 = sc.nextInt();
+        int N = sc.nextInt();
+        int[] arr1 = new int[N];
+        for(int i=0; i<N; i++){
+            arr1[i]=sc.nextInt();
+        }
 
-        System.out.println("첫번쨰 정수 : "+num1);
-        System.out.println("두번쨰 정수 : "+num2);
-        System.out.print("두 수의 합   : ");
-        System.out.println(num1+num2);
-    }
+        int M = sc.nextInt();
+        int[] arr2 = new int[M];
+        for(int j =0; j<M; j++){
+            arr2[j]=sc.nextInt();
+        }
 
-    public static void main2(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int l1 = sc.nextInt();
-        int l2 = sc.nextInt();
-
-        int[] array1 = new int[l1];
-        int[] array2 = new int[l2];
-
-        for(int i=0; i<array1.length; i++){
-            for(int j=0; j<array2.length; j++){
-                if(array1[i]==array2[j]){
+        for(int k=0; k<M; k++){
+            for(int l=0; l<N; l++){
+                if(arr2[k]==arr1[l]) {
                     System.out.println(1);
                 }
                 else{
@@ -47,12 +38,11 @@ public class BOJ_1920 {
                 }
             }
         }
-
     }
-    //sol1, hashSet이용
+    //sol2, hashSet이용
     public static void main3(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-       // int n = Integer.parseInt(br.readLine());
+        int n = Integer.parseInt(br.readLine());
 
         String[] a = br.readLine().split(" ");
         HashSet<String> hs = new HashSet<>(Arrays.asList(a));
