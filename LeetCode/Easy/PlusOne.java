@@ -31,7 +31,24 @@ package LeetCode.Easy;
  * 0 <= digits[i] <= 9
  *
  */
+//문제 이해가 안돼 머야 이게
 public class PlusOne {
-    
 
+    public int[] plusOne(int[] digits) {
+        int n = digits.length;
+
+        for (int i = n - 1; i >= 0; i--) {
+            digits[i]++;
+
+            if (digits[i] < 10) {
+                return digits;
+            }
+            digits[i] = 0;
+        }
+
+        int[] res = new int[n + 1];
+        res[0] = 1;
+
+        return res;
+    }
 }
