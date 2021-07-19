@@ -21,7 +21,7 @@ public class BOJ_2661 {
 
         backtracking("");
     }
-
+    //""으로 시작 잘봐
     //여기부분 잘 이해 x
     public static void backtracking(String str) {
         if(is_end) return;
