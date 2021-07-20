@@ -1,6 +1,6 @@
 package Programmers.exhaustivesearch;
 
-public class decimal2 {
+public class Prime2 {
     class Solution {
         static boolean sosu[] = new boolean[10000000];
         static boolean visited[] = new boolean[8];
