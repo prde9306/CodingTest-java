@@ -5,7 +5,7 @@ public class PrimeSummary {
 
     public static void main(String[]args){
 
-        System.out.println(getPrime());
+        System.out.println(getPrime(4));
     }
     public static int getPrime(int n){
         int cnt =0;//소수의 갯수
