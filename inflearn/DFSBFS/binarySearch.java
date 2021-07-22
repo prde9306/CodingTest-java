@@ -1,4 +1,4 @@
-package inflearn;
+package inflearn.DFSBFS;
 
 public class binarySearch {
 

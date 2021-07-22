@@ -1,4 +1,4 @@
-package inflearn;
+package inflearn.DFSBFS;
 
 public class 피보나치 {
     //재귀, 배열로 짜보라는 인터뷰 많이 나옴

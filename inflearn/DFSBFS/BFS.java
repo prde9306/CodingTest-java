@@ -1,4 +1,4 @@
-package inflearn;
+package inflearn.DFSBFS;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -42,7 +42,7 @@ public class Node2 {
             tree.root.lt.rt = new Node2(5);
             tree.root.rt.lt = new Node2(6);
             tree.root.rt.rt = new Node2(7);
-            tree.DFS(tree.root);
+            tree.BFS(tree.root);
 
         }
     }

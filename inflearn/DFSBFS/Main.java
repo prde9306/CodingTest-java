@@ -1,4 +1,4 @@
-package inflearn;
+package inflearn.DFSBFS;
 //부분집합
 public class Main {
     static int n;
@@ -23,8 +23,6 @@ public class Main {
             ch[L]=0;
             DFS(L+1);
         }
-
-
 
     }
     public static void main(String[]args){
