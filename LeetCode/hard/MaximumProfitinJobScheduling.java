@@ -3,8 +3,8 @@ package LeetCode.hard;
 import java.util.Arrays;
 
 public class MaximumProfitinJobScheduling {
-    //sol1 틀림
 
+    //sol1 틀림
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
        int answer =0;
         int[] profits =new int[startTime.length];
