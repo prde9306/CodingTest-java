@@ -12,7 +12,7 @@ public class BOJ_1003 {
     dp[1][1] = 1;	// N=1 일 때의 1 호출 횟수
 
 
-    statc Integer[] fibonacci(int N) {
+    static Integer[] fibonacci(int N) {
         // N에 대한 0, 1의 호출 횟수가 없을 떄(탐색하지 않은 값일 때)
         if(dp[N][0] == null || dp[N][1] == null) {
             // 각 N에 대한 0 호출 횟수와 1 호출 횟수를 재귀호출한다.
