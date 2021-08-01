@@ -4,65 +4,76 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+
+
+//그래프 BFS 강의 먼저
 class Point{
-    int x,y;
+    public int x;
+    public int y;
 
     Point(int x, int y){
-        this.x =x;
+        this.x = x;
         this.y= y;
-        }
+    }
 }
 
-public class Tomato {
+class Main{
+    static int board[][];
+    static int dis[][];
+    static int []dx ={-1,0,1,0};
+    static int []dy ={0, 1, 0, -1};
+    static Queue<Point> Q = new LinkedList<>();
 
-    static int [][]tomato, dis;
-    static int M, N;
-    static int dx[] ={-1, 0, 1, 0};
-    static int dy[] ={0, 1, 0, -1};
-
-
-    public void BFS(int x, int y) {
-
-        Queue<Point> Q = new LinkedList<>();
-
-
-
-
-
-
-
+    public void BRS(int x, int y){
+        //객체가 큐로
+        Q.offer(new Point(x,y));
+        board[x][y]=1;
+        while(!Q.isEmpty()){
+            Point tmp = Q.poll();
+            //여기서 12,9,3,6시 퍼져나감
+            for(int i=0; i<4; i++){
+                int nx = tmp.x + dx[i];
+                int ny = tmp.y + dy[i];
+                if(nx>=1 && nx<=7 && ny>=1 && ny<=7 && board[nx][ny]==0){
+                    board[nx][ny]=1;
+                    Q.offer(new Point(nx, ny));
+                    dis[nx][ny]= dis[tmp.x][tmp.y]+1;
+                }
+            }
+        }
     }
-
-//며칠이 지나야 다 익는가? 최소일수
-
-//익은, 익지않은, 안 들어있는 경우 3가지
-
-    //모두 익어있으면 0출력, 모두 익지 못하는 상황이면 -1출력
-    // 아님 최소일수 출력
-
 
     public static void main(String[]args){
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        //가로
-        M = sc.nextInt();
-        //세로
-        N = sc.nextInt();
-        tomato = new int[M+1][N+1];
-        dis = new int[M+1][N+1];
-        for(int i=1; i<M; i++){
-            for(int j=1; j<N; j++){
-                tomato[i][j] = sc.nextInt();
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+
+        board = new int[M][N];
+        dis = new int[M][N];
+        //BFS 돌기전에 출발점이 여러 개이면 미리 넣어놓아라
+
+        for(int i=0; i<M; i++){
+            for(int j=0; j<N; j++){
+                board[i][j]=sc.nextInt();
+                if(board[i][j]==1)Q.offer(new Point(i, j));
             }
         }
-        T.BFS(1,1);
-        if(tomato[M][N]==);
+        T.BFS();
+        for(int i=0; i<M; i++){
+            for(int j=0; j<N; j++){
+                if(board[i][j]==0) flag = false;
 
-
+            }
         }
-
-
-
+        if(flag){
+            for(int i=0; i<M; i++){
+                for(int j=0; j<N; j++){
+                    answer = Math.max(answer, dis[i][j]);
+                }
+            }
+            System.out.println(answer);
+        }
+        else System.out.println(-1);
 
     }
-}
