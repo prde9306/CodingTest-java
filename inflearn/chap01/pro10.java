@@ -7,8 +7,8 @@ import java.util.Scanner;
     class Main{
 
         public int[] solution(String str, Character target){
-            int [] answer = new int[str.lenght()];
-            int p=1000;
+            int [] answer = new int[str.length()];
+            int p = 1000;
 
             for(int i=0; i<str.length();i++){
                 if(str.charAt(i)==target){
@@ -19,7 +19,7 @@ import java.util.Scanner;
                     answer[i]=p;
                 }
             }
-            p=1000;
+            p = 1000;
             for(int i= str.length()-1; i>=0; i--){
                 if(str.charAt(i)==t){
                     p=0;

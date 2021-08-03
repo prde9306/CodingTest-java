@@ -1,4 +1,4 @@
-package inflearn.chap2;
+package inflearn.chap02;
 
 
 public class pro1 {
