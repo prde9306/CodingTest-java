@@ -3,6 +3,8 @@ package BOJ.BaseDatastructure;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Queue;
+//200804 복습
+//x번째 어떻게 꺼내는지 - 새로운 변수 선언하는 메커니즘 기억
 public class BOJ_1158 {
 
     public static void main(String[] args) {
