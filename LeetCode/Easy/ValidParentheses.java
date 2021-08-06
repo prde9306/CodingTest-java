@@ -33,6 +33,7 @@ import java.util.Stack;
  *
  * Input: s = "{[]}"
  * Output: true
+ *
  */
 public class ValidParentheses {
     static Map<Character, Character> mappings = new HashMap<>();
