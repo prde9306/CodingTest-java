@@ -24,7 +24,9 @@ public class pro5 {
      *
      *  Tset.first()
      *  Tset.remove()
-     *  Tset.
+     *
      * }
      */
+
+
 }
