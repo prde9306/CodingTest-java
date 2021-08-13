@@ -25,11 +25,16 @@ public class pro1 {
      int cnt =0;
      Collection.sort(arr);
      //위에있는 정렬기준에 의해 정렬됨 .
+
      int max = Integer.MIN_VALUE;
+
      for(Body ob : arr){
+
      if(ob.y>max){
+
      max =ob.y;
      cnt ++;
+
      }
      }
 
