@@ -28,7 +28,7 @@ public class island {
         }
     }
     public static void main(String[]args){
-        Main T = new Main();
+        부분집합 T = new 부분집합();
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         int[][] arr = new int[n][n];

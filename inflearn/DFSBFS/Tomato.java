@@ -44,7 +44,7 @@ class Main{
     }
 
     public static void main(String[]args){
-        Main T = new Main();
+        부분집합 T = new 부분집합();
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();

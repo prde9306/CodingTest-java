@@ -1,7 +1,10 @@
 package inflearn.chap02;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class pro4 {
-    /import java.io.IOException;
+    //so1 이게 일반적인 방식 이렇게 해서 맞음
 
     class Main{
 
@@ -28,8 +31,6 @@ public class pro4 {
         }
     }
     //배열 쓰지 않는 경우
-    import java.io.IOException;
-
     class Main{
         public void solution(int n){
             int a=1, b=1, c;
@@ -42,7 +43,7 @@ public class pro4 {
             }
         }
 
-        public static void main(String[]args)throws IOException{
+        public static void main(String[]args)throws IOException {
 
             Main T = Main();
             Scanner sc = new Scanner(System.in);

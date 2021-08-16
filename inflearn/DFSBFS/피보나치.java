@@ -28,7 +28,7 @@ public class 피보나치 {
     }
 
     public static void main(String[]args){
-        Main T = new Main();
+        부분집합 T = new 부분집합();
         int n =10;
         fibo = new int[n+1];
         T.DFS(n);
