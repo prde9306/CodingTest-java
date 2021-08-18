@@ -1,7 +1,6 @@
-package inflearn.chap01;
+package inflearn.chap01String;
 
 import java.io.IOException;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {

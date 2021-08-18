@@ -2,7 +2,7 @@ package inflearn.DFSBFSLv2;
 
 import java.util.Scanner;
 
-public class Main {
+public class pro1 {
 
       //합이 같아야 하고, 서로 중복된 원소를 가지면 안된다.
       //YES or NO 찍어라
@@ -27,7 +27,7 @@ public class Main {
           }
 
           public static void main(String[]args){
-              Main T = new Main();
+              pro1 T = new pro1();
               Scanner kb = new Scanner(System.in);
               n = kb.nextInt();
               arr = new int[n];

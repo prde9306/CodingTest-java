@@ -1,7 +1,6 @@
-package inflearn.chap02;
+package inflearn.chap02Array;
 
 //진짜 약수를 출력해라
-import java.*;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;

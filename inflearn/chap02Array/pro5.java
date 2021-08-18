@@ -1,4 +1,4 @@
-package inflearn.chap02;
+package inflearn.chap02Array;
 
 import java.io.IOException;
 import java.util.Scanner;

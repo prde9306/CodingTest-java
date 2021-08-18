@@ -1,4 +1,4 @@
-package inflearn.chap04;
+package inflearn.chap04HashMapTreeSet;
 
 import java.util.Scanner;
 import java.io.IOException;

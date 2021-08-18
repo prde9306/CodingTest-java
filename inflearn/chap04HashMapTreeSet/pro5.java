@@ -1,4 +1,4 @@
-package inflearn.chap04;
+package inflearn.chap04HashMapTreeSet;
 
 public class pro5 {
 

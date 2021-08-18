@@ -1,4 +1,4 @@
-package inflearn.chap02;
+package inflearn.chap02Array;
 
 public class pro11 {
     public int solution(int n, int[][]arr){

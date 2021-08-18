@@ -1,4 +1,4 @@
-package inflearn.chap01;
+package inflearn.chap01String;
 
 public class pro4 {
     //sol1 StringBuilder 이용하기
