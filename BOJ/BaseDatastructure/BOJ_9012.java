@@ -20,6 +20,7 @@ public class BOJ_9012 {
         Stack<Character> stack = new Stack<>();
 
         for (int i=0; i<s.length(); i++){
+
             char c = s.charAt(i);
             //여는 괄호일 경우 스택에 넣기
             if(c=='('){
