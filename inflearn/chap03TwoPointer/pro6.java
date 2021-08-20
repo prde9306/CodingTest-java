@@ -1,4 +1,4 @@
-package inflearn.chap03;
+package inflearn.chap03TwoPointer;
 
 public class pro6 {
     /**

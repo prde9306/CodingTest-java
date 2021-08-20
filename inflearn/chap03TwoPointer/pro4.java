@@ -1,4 +1,4 @@
-package inflearn.chap03;
+package inflearn.chap03TwoPointer;
 
 import java.io.IOException;
 import java.util.Arrays;
