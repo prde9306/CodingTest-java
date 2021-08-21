@@ -1,5 +1,5 @@
-#CodingTest - Java
-## 😀 BOJ(백준)
+# CodingTest - Java
+## 👊🏽 BOJ(백준)
 1. BackTracking
 2. BaseDataStructure
 3. DFS/BFS
@@ -7,13 +7,13 @@
 5. Search/Sort
 ***
 
-## 🖥 LeetCode
+## 👍 LeetCode
 1. Easy
 2. Medium
 3. Hard
 ***
 
-## 🎲 Programmers
+## ✋ Programmers
 1. DFS/BFS
 2. DynamicProgramming
 3. ExhaustiveSearch
