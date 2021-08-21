@@ -1,6 +1,4 @@
-package Programmers.stackqueue;
-
-import java.util.LinkedList;
+package Programmers.StackQueue;
 
 /**
  * 문제 설명

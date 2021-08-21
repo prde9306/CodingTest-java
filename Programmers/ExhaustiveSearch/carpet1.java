@@ -1,4 +1,4 @@
-package Programmers.exhaustivesearch;
+package Programmers.ExhaustiveSearch;
 
 public class carpet1 {
     //노란색 무조건 1개는 칠해져있음

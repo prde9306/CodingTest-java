@@ -1,6 +1,5 @@
-package Programmers.greedy;
+package Programmers.Greedy;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class islandConnecting {

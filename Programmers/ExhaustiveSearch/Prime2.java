@@ -1,4 +1,4 @@
-package Programmers.exhaustivesearch;
+package Programmers.ExhaustiveSearch;
 
 public class Prime2 {
 

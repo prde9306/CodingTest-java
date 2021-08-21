@@ -1,4 +1,4 @@
-package Programmers.dynamicProgramming;
+package Programmers.DynamicProgramming;
 
 public class Nexpression {
     //N으로 사칙연산, -> count해야

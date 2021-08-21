@@ -1,4 +1,4 @@
-package BOJ.backtracking;
+package BOJ.Backtracking;
 
 import java.util.Scanner;
 

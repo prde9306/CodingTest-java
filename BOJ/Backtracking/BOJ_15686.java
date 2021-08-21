@@ -1,9 +1,6 @@
-package BOJ.backtracking;
+package BOJ.Backtracking;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class BOJ_15686 {

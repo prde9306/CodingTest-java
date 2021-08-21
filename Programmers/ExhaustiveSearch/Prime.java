@@ -1,4 +1,4 @@
-package Programmers.exhaustivesearch;
+package Programmers.ExhaustiveSearch;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;

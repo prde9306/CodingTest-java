@@ -1,4 +1,4 @@
-package Programmers.greedy;
+package Programmers.Greedy;
 
 public class gymclothes {
 
