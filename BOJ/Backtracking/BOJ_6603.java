@@ -36,6 +36,7 @@ public class BOJ_6603 {
             System.out.println();
         }
         for(int i=start; i<N; i++){
+            //For문 둘러싸고 안 싸고 차이
             result[i]=true;
             DFS(i+1, depth+1);
             result[i]=false;
