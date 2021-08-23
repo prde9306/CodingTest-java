@@ -1,13 +1,9 @@
-package BOJ.SearchSort;
+package BOJ.SearchingAndSorting;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Scanner;
-
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
 public class BOJ_10989 {
     //sol1. BufferedReader, Arrays.sort()

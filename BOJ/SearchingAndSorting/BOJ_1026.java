@@ -1,16 +1,17 @@
-package BOJ.SearchSort;
+package BOJ.SearchingAndSorting;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class BOJ_1026 {
 
-        //sol2
+    /**
+     * 문제풀이는 맞았는데 내림차순 정렬 내가 모를 다른 라이브러리 있을 거라 생각...
+     * @param args
+     * @throws Exception
+     */
+
         public static void main(String[] args) throws Exception {
-            // TODO Auto-generated method stub
 
             Scanner sc = new Scanner(System.in);
             // 전채 갯수? default로 10?
@@ -27,6 +28,7 @@ public class BOJ_1026 {
 
             }
             Arrays.sort(A);
+            //내림차순 정렬 다르게 @@@
             Arrays.sort(B);
             int sum = 0;
             for (int i = 0; i < n; i++) {

@@ -1,4 +1,4 @@
-package BOJ.SearchSort;
+package BOJ.SearchingAndSorting;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package InflearnLecture.chap06;
+package InflearnLecture.chap06SortingAndSearching;
 
 public class pro1 {
     /**
