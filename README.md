@@ -22,4 +22,13 @@
 ***
 
 ## 💻 Inflearn(강의)
-1. Chap 01 ~ Chap 10
+1. Chap 01 
+2. 
+3. 
+4. Chap 04 HashMap // slidingWindow 로 푸는 방법, HashMap 메소드 활용법(equals로 객체비교 가능), TreeSetd 활용법
+5. Chap 05 Stack,Queue // charAt(i) String에서 적절하게 활용
+6. 
+7. 
+8. 
+9. 
+10. Chap 10

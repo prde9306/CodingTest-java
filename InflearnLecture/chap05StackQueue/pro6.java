@@ -5,10 +5,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+/**
+ * sol 1,2,3 다 같은 매커니즘이다.
+ */
 class Main{
 
+    //sol1
     public int solution(int N, int M){
-    //이런 방식도 가능
         Queue<Integer> qu = new LinkedList<>();
         Queue<Integer> answer = new LinkedList<>();
 
@@ -42,6 +45,25 @@ class Main{
             if(Q.size()==1) answer= Q.poll();
         }
         return answer;
+    }
+
+    //sol3
+    public int solution3(int N, int M){
+        Queue<Integer> qu = new LinkedList();
+        for(int i=1; i<=N; i++){
+            qu.add(i);
+        }
+        int cnt =0;
+        while(!qu.isEmpty()){
+            cnt++;
+            if(cnt%M==0){
+                qu.poll();
+            }else{
+                qu.add(qu.poll());
+            }
+            if(qu.size()==1) break;
+        }
+        return qu.poll();
     }
 
 
