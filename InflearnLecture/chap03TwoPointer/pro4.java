@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class Main{
-    //이중 포문 돌리지마
+    //이중 포문 돌리지마 시간 초과난다.
 
     public int solution(int N, int M, int[]arr){
 
