@@ -1,5 +1,10 @@
 package InflearnLecture.chap06SortingAndSearching;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class pro6 {
     /**
      * 이렇게 안풀린다.
@@ -45,11 +50,6 @@ public class pro6 {
      */
 
     //sol2
-    /**
-    import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Arrays;
 
     // 배열2개에 담아라
 // <로 확인하면서 cnt 올리고 <에 만족하지 않으면 배열에 집어넣기
@@ -57,7 +57,6 @@ import java.util.Arrays;
 
         public ArrayList<Integer> solution(int N, int[]arr){
             ArrayList<Integer> answer = new ArrayList<>();
-
             // 깊은 복사를 해야 arr은 그대로 있음
             int[]tmp = arr.clone();
             Arrays.sort(tmp);
@@ -66,7 +65,7 @@ import java.util.Arrays;
             }
             return answer;
         }
-        public static void main(String[]args)throws IOException{
+        public static void main(String[]args)throws IOException {
             Main T = new Main();
 
             Scanner sc = new Scanner(System.in);
@@ -82,5 +81,5 @@ import java.util.Arrays;
 
         }
     }
-**/
+
 }

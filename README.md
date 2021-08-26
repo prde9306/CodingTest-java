@@ -27,7 +27,7 @@
 3. Chap 03 TwoPointer // 알고리즘 O(N^2) -> O(N)으로 
 4. Chap 04 HashMap // slidingWindow 로 푸는 방법, HashMap 메소드 활용법(equals로 객체비교 가능), TreeSetd 활용법
 5. Chap 05 Stack,Queue // charAt(i) String에서 적절하게 활용
-6. 
+6. Chap 06 Sorting, Searching // 선택정렬, 버블정렬, 삽입정렬, 퀵정렬, 병합정렬 개념
 7. 
 8. 
 9. Chap 09 Greedy // 객체정렬하는 방식, 
