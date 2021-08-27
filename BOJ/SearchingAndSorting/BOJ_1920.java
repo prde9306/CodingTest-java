@@ -39,6 +39,7 @@ public class BOJ_1920 {
             }
         }
     }
+
     //sol2, hashSet이용
     public static void main3(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -59,8 +60,8 @@ public class BOJ_1920 {
         }
     }
 
-    //sol2
-    //bSearch많이 사용됨
+    //sol3
+    //bSearch많이 사용됨(이렇게 생각함)
     public static boolean bSearch(int[] arr, int target) {
         int min = 0;
         int max = arr.length - 1;
@@ -79,6 +80,7 @@ public class BOJ_1920 {
         return false;
     }
 
+    //sol 4
     public static void main4(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
