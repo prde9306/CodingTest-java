@@ -4,45 +4,83 @@ package InflearnLecture.chap07DFSBFS;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
 
-public class CowFind {
+// import java.io.IOException;
+// import java.util.LinkedList;
+// import java.util.Queue;
+// import java.util.Scanner;
+
+// class Main{
+//   public int solution(int S, int E){
+//     int answer =0;
+//     int []dis = {5,1,-1};
+//     Queue<Integer> qu = new LinkedList<>();
+//     qu.offer(S);
+//     while(!qu.isEmpty()){
+//       for(int i=0; i<3; i++){
+//         int push = qu.peek();
+//         push+=dis[i];
+//         if(push==E) return answer;
+//         System.out.println(push);
+//         qu.offer(push);
+//       }
+//       int size = qu.size();
+//       answer++;
+
+//       qu.poll();
+//     }
+//     return answer;
+//   }
+
+
+//   public static void main(String[] args)throws IOException{
+//     Main T = new Main();
+//     Scanner sc = new Scanner(System.in);
+//     int S = sc.nextInt();
+//     int E = sc.nextInt();
+
+//     System.out.println(T.solution(S, E));
+//   }
+// }
+
+class Main{
     int answer =0;
-    int[] dis = {1,-1,5};
-    int [] ch;
+    int []dis = {1,-1,5};
+    //ch 만 생각 못해냄
+    int[]ch;
     Queue<Integer> Q = new LinkedList<>();
-
-    public int BFS(int s, int e) {
+    public int BFS(int S, int E){
         ch = new int[10001];
-        ch[s] = 1;
-        Q.offer(s);
-        int Level = 0;
-        while (!Q.isEmpty()) {
+        ch[S]=1;
+        Q.offer(S);
+        int L =0;
+
+        while(!Q.isEmpty()){
+            //여기 바로 아래 두줄을 생각 못함
             int len = Q.size();
-            for (int i = 0; i < len; i++) {
-                int x = Q.poll();
-                //여기서 이렇게 확인해도 되고 if (x == e) return Level;
-                for (int j = 0; j < 3; j++) {
-                    int nx = x + dis[j];
-                    //nx가 음수로 가지 않게, 방문 여부 0,1로 표시
-                    if(nx==e) return Level + 1;
-                    if (nx >= 1 && nx <= 10000 && ch[nx] == 0) {
-                        ch[nx] = 1;
+            for(int i=0; i<len; i++){
+                //int x = Q.poll(); 여기서 확인해도 되고
+                if(x==e) return L;
+                for(int j=0; j<3; j++){
+                    int nx = x+dis[j];
+                    if(nx==e) return L+1;
+                    if(nx>=1 && nx<=10000 &&ch[nx]==0){
+                        ch[nx]=1;
                         Q.offer(nx);
                     }
                 }
             }
-            Level++;
+            L++;
         }
         return 0;
     }
 
-    public static void main(String[]args){
-        CowFind T = new CowFind();
+    public static void main(String[] args)throws IOException{
+        Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        int s= sc.nextInt();
-        int e = sc.nextInt();
-        System.out.println(T.BFS(s,e));
-    }
+        int S = sc.nextInt();
+        int E = sc.nextInt();
 
+        System.out.println(T.BFS(S, E));
+    }
 }
