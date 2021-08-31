@@ -1,4 +1,4 @@
-package InflearnLecture.dynamic;
+package InflearnLecture.chap10dynamic;
 
 public class pro2 {
 

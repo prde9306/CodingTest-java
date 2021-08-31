@@ -1,4 +1,4 @@
-package InflearnLecture.dynamic;
+package InflearnLecture.chap10dynamic;
 
 import java.io.IOException;
 import java.util.Scanner;

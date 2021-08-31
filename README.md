@@ -26,6 +26,7 @@
 2. 
 3. Chap 03 TwoPointer
    * 알고리즘 O(N^2) -> O(N)으로 
+   * 연속 부분 증가수열 if 후에 while쓴는 메커니즘
 4. Chap 04 HashMap
    * slidingWindow 로 푸는 방법, HashMap 메소드 활용법(equals로 객체비교 가능), TreeSet 활용법
 5. Chap 05 Stack,Queue 
