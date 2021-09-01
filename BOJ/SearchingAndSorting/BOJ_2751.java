@@ -8,8 +8,10 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class BOJ_2751 {
+
     public static void main(String[]args) throws IOException {
         //Java기준 Arrays.sort 로 쓰면 시간초과가 난다.   (2021.01.11 Java → Java8 명칭이 변경됨)
+
         //sol1. Scanner + Collection.sort()
         Scanner in = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
@@ -30,7 +32,8 @@ public class BOJ_2751 {
         }
         System.out.println(sb);
     }
-        //sol2.
+
+    //sol2.
         public static void main2(String[] args) throws IOException {
 
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

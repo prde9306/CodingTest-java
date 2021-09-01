@@ -2,56 +2,45 @@ package BOJ.Backtracking;
 
 import java.util.Scanner;
 
-public class BOJ_2661 {
-    //다 나열하고 그중 최소?
-    //
-    public static final int START = 1;
-    public static final int END = 3;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-    public static int len;
-    public static int[] arr;
-    public static boolean is_end = false;
+public class Main {
 
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+    private static int N;
 
-        len = sc.nextInt();
+    public static void main(String[] args) throws IOException {
 
-        arr = new int[len];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        N = Integer.parseInt(br.readLine());
 
         backtracking("");
     }
-    //""으로 시작 잘봐
-    //여기부분 잘 이해 x
-    public static void backtracking(String str) {
-        if(is_end) return;
 
-        if(str.length() == len) {
-            System.out.println(str);
-            is_end = true;
+    private static void backtracking(String result) {
+        if (result.length() == N) {
+            System.out.println(result);
+            System.exit(0); // 현재 실행하고 있는 프로세스를 강제 종료
 
-            return;
-        }
-
-        for(int i= START; i <= END; i++) {
-            if(isAble(str+i)) {
-                backtracking(str+i);
+        } else {
+            for (int i = 1; i <= 3; i++) {
+                if (isGoodSequence(result + i)) {
+                    backtracking(result + i);
+                }
             }
         }
     }
-    public static boolean isAble(String str) {
-        int len = str.length();
-        // 1212 가 들어올 경우
-        // 한글자씩 비교 했을 경우에는 유효하지만
-        // 두글자씩 비교 했을 경우에는 12 12 가 같으므로 유효하지 않다.
-        for(int i = 1; i <= len/2; i++) {
-            String front_str = str.substring(str.length()-i-i, str.length()-i);
-            String behind_str = str.substring(str.length()-i, str.length());
 
-            if(front_str.equals(behind_str)) return false;
+    private static boolean isGoodSequence(String s) {
+        int length = s.length() / 2;
+
+        for (int i = 1; i <= length; i++) {
+            if (s.substring(s.length() - i).equals(s.substring(s.length() - 2 * i, s.length() - i))) {
+                return false;
+            }
         }
-
         return true;
     }
 }
-

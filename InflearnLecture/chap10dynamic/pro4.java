@@ -3,8 +3,6 @@ package InflearnLecture.chap10dynamic;
 import java.io.IOException;
 import java.util.*;
 
-import org.graalvm.compiler.nodes.cfg.Block;
-
 class block implements Comparable<block>{
     int width, height, weight;
     public block(int width, int height, int weight){
@@ -27,7 +25,8 @@ class Main{
         //첫번째 벽돌의 높이
         dy[0]=arr.get(0).height;
         //dy는 i번째 벽돌을 맨위에 놓았을 때 그 탑의 높이
-                answer = dy[0];
+        answer = dy[0];
+
         for(int i=1; i<arr.size(); i++){
             int max_h =0;
             for(int j=i-1; j>=0 ; j--){
