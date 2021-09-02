@@ -25,7 +25,7 @@
 ***
 
 ## 💻 Inflearn(강의)
-1. Chap 01 
+1. Chap 01 : charAt(i), toCharArray(), toUpperCase 사용법 철저히 알기
 2. 
 3. Chap 03 TwoPointer
    * 알고리즘 O(N^2) -> O(N)으로 
@@ -39,7 +39,7 @@
 7. Chap 07 DFS, BFS 기초 
 8. Chap 08 DFS, BFS 
    * 부분집합 DFS 
-   * else안에 for문 +DFS- 명확히 Stack으로 그려서 확인
+   * else안에 for문 +DFS- 명확히 Stack으로 그려서 확인/ 중복순열
    * 이미 갔던 길 가지 않게 끔 ch[]배열 생성해서
    * 메모이제이션 조합 풀이방식 암기 
    * 

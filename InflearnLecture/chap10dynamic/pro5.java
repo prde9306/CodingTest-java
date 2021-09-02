@@ -19,6 +19,9 @@ class Main{
         dy[0]=0;
         for(int i=0; i<N; i++){
             for(int j=coin[i]; j<=M; j++){
+                // 1원 짜리만 있을 때 거스름돈,
+                // 2원  ""
+                // 5원 짜리만 있을 때 거스름 돈~~
                 dy[j]=Math.min(dy[j], dy[j-coin[i]]+1);
             }
         }
