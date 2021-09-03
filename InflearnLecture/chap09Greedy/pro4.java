@@ -34,15 +34,18 @@ class Main{
 
         Collections.sort(arr);
 
+        //여기부터 아래까지 생각 못함
         int j =0;
         //max가 가장 큰 날짜
-        for(int i=max; i>=1; i--)
-            for( ; j<N; j++){
-                if(arr.get(j).time<i) break;
+        for(int i=max; i>=1; i--) {
+            for (; j < N; j++) {
+                //break어디로 나가는지 헐.. 아직도 continue비교
+                if (arr.get(j).time < i) break;
                 pq.offer(arr.get(j).revenue);
             }
-        //queue에 들어간 값중 가장 큰 값을 꺼낸다.
-        if(!pq.isEmpty()) answer +=pq.poll();
+            //queue에 들어간 값중 가장 큰 값을 꺼낸다.
+            if (!pq.isEmpty()) answer += pq.poll();
+        }
         return answer;
     }
 

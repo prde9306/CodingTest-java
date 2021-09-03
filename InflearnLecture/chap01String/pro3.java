@@ -43,7 +43,8 @@ public  class Main{
                   str = str.substring(pos+1);
               }
               //indexOf , substring했을 때는 마지막 단어 처리 꼭 해줘야
-              //마지막 단어는 공백이 없으니까 -1로나오고 끝나버리기 때문에 추가작업 해줘야 함.
+
+                //마지막 단어는 공백이 없으니까 -1로나오고 끝나버리기 때문에 추가작업 해줘야 함.
               if(str.length()>m) answer = str;
               return answer;
           }
