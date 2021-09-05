@@ -15,6 +15,7 @@ class Main{
             for(int j=0; j<N; j++){
                 boolean flag = true;
                 for(int k=0; k<4; k++){
+
                     int nx = i+dx[k];
                     int ny = j+dy[k];
                     //실제로 배열을 안 늘려줬으니까 밖으로 빠지는 것 맊아줘야 함

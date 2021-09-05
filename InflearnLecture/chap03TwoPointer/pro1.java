@@ -17,6 +17,7 @@ public class pro1 {
      *             if(arr1[p1]<arr2[p2]) answer.add(a[p1++]);
      *             else answer.add(b[p2++]);
      *         }
+     *
      *         while(p1<N) answer.add(a[p1++]);
      *         while(p2<N) answer.add(b[p2++]);
      *
@@ -30,6 +31,7 @@ public class pro1 {
 
         public int[] solution(int N, int M, int[]arr1, int[]arr2){
             int []answer = new int[N+M];
+
             for(int i=0; i<N; i++){
                 answer[i]= arr1[i];
             }
