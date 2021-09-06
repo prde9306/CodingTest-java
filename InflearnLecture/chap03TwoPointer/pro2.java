@@ -7,16 +7,23 @@ import java.util.*;
 
 public class Main{
     public ArrayList<Integer> solution(int N, int M, int[]arr1, int[]arr2){
+
         int p1=0, p2=0;
+
         ArrayList<Integer> answer = new ArrayList<>();
 
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
+        //여기 어떻게 진행되는지 정확히 봐
         while(p1<N && p2<M){
-            if(arr1[p1]==arr2[p2]){answer.add(arr1[p1++]);
-                p2++;}
+
+            if(arr1[p1]==arr2[p2]){
+                answer.add(arr1[p1++]);
+                p2++;
+            }
             else if(arr1[p1]>arr2[p2])p2++;
+
             else p1++;
         }
 

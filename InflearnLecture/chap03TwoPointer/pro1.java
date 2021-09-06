@@ -26,6 +26,7 @@ public class pro1 {
      */
 
     //이런식으로 짜는 게 의도가 아니야
+        //Arrays.sort 시간초과 날 수도 있다.
 
     class Main{
 

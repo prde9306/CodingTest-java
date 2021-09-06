@@ -5,12 +5,14 @@ package InflearnLecture.chap03TwoPointer;
 import java.io.IOException;
 import java.util.Scanner;
 
+
 class Main{
     //연속된 자연수 풀 때  TwoPointer 사용
 
     public int solution(int N){
         int answer =0, lt =0;
         int sum=0;
+        //왜 m을 N으로 하면 안되는지 확실히 알기
         int m =N/2 +1;
 
         for(int rt=0; rt<m; rt++){

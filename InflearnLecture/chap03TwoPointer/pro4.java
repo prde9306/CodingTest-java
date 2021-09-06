@@ -7,9 +7,12 @@ import java.util.Scanner;
 class Main{
     public int solution(int N, int M, int[]arr){
         int answer=0, sum=0, lt=0;
+
+        //뒤에꺼를 계속 움직여야 한다.
         for(int rt =0; rt<N; rt++){
             sum +=arr[rt];
             if(sum==M)answer++;
+
             while (sum>=M){
                 sum-=arr[lt++];
                 if(sum==M)answer++;
