@@ -27,7 +27,8 @@
    * charAt(i) String에서 적절하게 활용
 6. Chap 06 Sorting, Searching
    * 선택정렬, 버블정렬, 삽입정렬, 퀵정렬, 병합정렬 개념
-7. Chap 07 DFS, BFS 기초 
+7. Chap 07 
+   * 인접행렬, 인접리스트 구분  
 8. Chap 08 DFS, BFS 
    * 부분집합 DFS 
    * else안에 for문 +DFS- 명확히 Stack으로 그려서 확인/ 중복순열
