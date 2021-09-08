@@ -62,7 +62,8 @@ class Main{
             //여기 바로 아래 두줄을 생각 못함
             int len = Q.size();
             for(int i=0; i<len; i++){
-                //int x = Q.poll(); 여기서 확인해도 되고
+                int x = Q.poll();
+                //여기서 확인해도 되고
                 //if(x==e) return L;
                 for(int j=0; j<3; j++){
                     int nx = x+dis[j];

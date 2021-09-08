@@ -43,7 +43,6 @@ class Main{
             int b = sc.nextInt();
             graph.get(a).add(b);
         }
-
         ch[1]=1;
         T.DFS(1);
         System.out.println(answer);

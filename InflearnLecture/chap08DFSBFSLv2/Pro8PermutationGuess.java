@@ -9,7 +9,7 @@ class Main{
     int[][]dy = new int[35][35];
 
     public int combi(int n, int r){
-        if(dy[n][r]>0) return d[r][y];
+        if(dy[n][r]>0) return dy[n][r];
         if(n==r||r==0) return 1;
         else return dy[n][r]=combi(n-1, r-1) + combi(n-1,r);
     }
