@@ -14,8 +14,9 @@ class Main{
         //dy 0인 이유 : 0번째 항의 값보다 작은 것 없고 +1(자기자신)
         dy[0]=1;
         for(int i=1; i<arr.length; i++){
-            int max =0;//max 0으로 하는 이유 잘알기
+            int max =0;//max 0으로 하는 이유 잘알기(이 경우의 수 생각은 했는데 밑에처럼 식을 못짬)
             for(int j=i-1; j>=0; j--){
+                //여기 dy[j]>max 부분 생각 못함
                 if(arr[j]<arr[i] && dy[j]>max) max =dy[j];
             }
             dy[i]= max+1;
