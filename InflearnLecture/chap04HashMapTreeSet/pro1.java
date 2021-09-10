@@ -25,11 +25,9 @@ class Main{
 
         int max = Integer.MIN_VALUE;
         for(char key : map.keySet()){
-            //System.out.println(key+" "+map.get(key));
             if(map.get(key)>max) max = map.get(key);
             answer =key;
         }
-
         return answer;
     }
 
@@ -42,6 +40,5 @@ class Main{
         String target = sc.nextLine();
 
         System.out.print(T.solution(N, target));
-
     }
 }

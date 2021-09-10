@@ -23,10 +23,7 @@ public class Main {
         }
         return true;
 
-
-
     }
-
     public static void main (String[]args)throws IOException{
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
@@ -62,4 +59,36 @@ public class Main {
             System.out.println(T.solution(str));
         }
     }
+    /**
+     * class Main{
+     *
+     *
+     *     public String solution(char[]arr, String str){
+     *         int lt = 0;
+     *         int rt = arr.length-1;
+     *         String answer = "YES";
+     *
+     *         while(lt<rt){
+     *             if(arr[lt]==arr[rt]){
+     *                 lt++;
+     *                 rt--;
+     *             }else{
+     *                 return answer = "NO";
+     *             }
+     *         }
+     *         return answer;
+     *     }
+     *
+     *     public static void main(String[] args) throws IOException{
+     *
+     *         Main T =new Main();
+     *         Scanner sc = new Scanner(System.in);
+     *         String str = sc.nextLine();
+     *
+     *         str = str.toUpperCase();
+     *         char[]arr = str.toCharArray();
+     *         System.out.print(T.solution(arr, str));
+     *     }
+     * }
+     */
 }
