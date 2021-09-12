@@ -1,16 +1,16 @@
 package Programmers.StackQueue;
 
-import java.util.ArrayList;
+import java.util.*;
 
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         int[] answer = new int[progresses.length];
         //시간 측정
-        for(int i=0; i < progresses.length;i++){
+        for (int i = 0; i < progresses.length; i++) {
             int prog = progresses[i];
             int workingTime = 0;
-            while(true){
-                if(prog >= 100) break;
+            while (true) {
+                if (prog >= 100) break;
                 prog += speeds[i];
                 workingTime++;  //일한 시간 입니다.
             }
@@ -19,13 +19,15 @@ class Solution {
 
         //값 확인
         ArrayList<Integer> list = new ArrayList<>();
-        for(int i=0 ; i < answer.length ; i++){  //기준값 입니다.
+        for (int i = 0; i < answer.length; i++) {  //기준값 입니다.
             int origin = answer[i];
             int count = 1;
-            if(origin < 0){continue;} //조사가 완료된 대상이면 건너뛰기를 합니다.
-            for(int j=i+1 ; j < answer.length ; j++){  //기준값 다음의 값 입니다.
+            if (origin < 0) {
+                continue;
+            } //조사가 완료된 대상이면 건너뛰기를 합니다.
+            for (int j = i + 1; j < answer.length; j++) {  //기준값 다음의 값 입니다.
                 int compare = answer[j];
-                if(origin >= compare){
+                if (origin >= compare) {
                     answer[j] = -1; //조사가 완료되었으므로 대상에서 제거 합니다.
                     count++;
                 } else {
@@ -34,9 +36,10 @@ class Solution {
             }
             list.add(count);
         }
-        answer = list.stream().mapToInt(i ->i).toArray();
+        answer = list.stream().mapToInt(i -> i).toArray();
         return answer;
     }
+}
     //sol2
     class Solution {
         public int[] solution(int[] progresses, int[] speeds) {
@@ -91,5 +94,36 @@ class Solution {
             }
             return answer;
         }
+    }
+    //sol 4
+    public int[] solution(int[] progresses, int[] speeds) {
+        Stack<Integer> stack = new Stack<Integer>();
+
+        //이 바로 아래 식을 확실히 이해해야 한다.(몫과 나머지를 더한 값)
+        for (int i = progresses.length - 1; i >= 0; i--)
+            stack.add((100 - progresses[i]) / speeds[i] + ((100 - progresses[i]) % speeds[i] > 0 ? 1 : 0));
+
+        List<Integer> s = new ArrayList<Integer>();
+
+        while (!stack.isEmpty()) {
+            int cnt = 1;
+
+            int top = stack.pop();
+
+            while (!stack.isEmpty() && stack.peek() <= top) {
+                cnt++;
+                stack.pop();
+            }
+
+            s.add(cnt);
+        }
+
+        int[] answer = new int[s.size()];
+
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = s.get(i);
+        }
+
+        return answer;
     }
 }

@@ -48,7 +48,7 @@ import java.util.Scanner;
 class Main{
 
     int []dis = {1,-1,5};
-    //ch 만 생각 못해냄
+    //ch[] 한 번 방문한 것 Queue에 안 넣겠다는 것이다.
     int[]ch;
     Queue<Integer> Q = new LinkedList<>();
     public int BFS(int S, int E){

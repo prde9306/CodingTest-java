@@ -12,6 +12,8 @@
 3. ExhaustiveSearch
 4. Greedy
 5. Stack/Queue
+   * 기능개발 : 풀이 여러 가지로 가능, 어렵다
+   * 
 ***
 
 ## 💻 Inflearn(강의)
