@@ -40,7 +40,8 @@ class Solution {
         return answer;
     }
 }
-    //sol2
+
+//sol2
     class Solution {
         public int[] solution(int[] progresses, int[] speeds) {
             int[] dayOfend = new int[100];
@@ -99,8 +100,8 @@ class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         Stack<Integer> stack = new Stack<Integer>();
 
-        //이 바로 아래 식을 확실히 이해해야 한다.(몫과 나머지를 더한 값)
         for (int i = progresses.length - 1; i >= 0; i--)
+            // 이 바로 아래 식을 확실히 이해해야 한다.(몫과 나머지를 더한 값)
             stack.add((100 - progresses[i]) / speeds[i] + ((100 - progresses[i]) % speeds[i] > 0 ? 1 : 0));
 
         List<Integer> s = new ArrayList<Integer>();
