@@ -25,6 +25,7 @@ import java.util.Comparator;
  *
  */
 
+//조합으로 풀 수 있지 않을까?
 public class MaxNumber {
 
     //sol1
@@ -39,10 +40,9 @@ public class MaxNumber {
 
         // 정렬
         Arrays.sort(result, new Comparator<String>() {
-
             @Override
             public int compare(String o1, String o2) {
-                //내림차순
+                //내림차순 확실하게 1234라면 12-21, 23-32, 34-43???는 아닌듯하고
                 return ((o2 + o1).compareTo(o1 + o2));
             }
         });

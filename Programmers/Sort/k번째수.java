@@ -1,26 +1,27 @@
 package Programmers.Sort;
+
 import java.util.Arrays;
 
 /**
  * 1 번 프로그래머스 정렬-K번째 수
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.
- *
+ * <p>
  * 예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면
- *
+ * <p>
  * array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.
  * 1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.
  * 2에서 나온 배열의 3번째 숫자는 5입니다.
  * 배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.
- *
+ * <p>
  * 제한사항
  * array의 길이는 1 이상 100 이하입니다.
  * array의 각 원소는 1 이상 100 이하입니다.
  * commands의 길이는 1 이상 50 이하입니다.
  * commands의 각 원소는 길이가 3입니다.
- *
+ * <p>
  * 입출력 예
  * array	commands	return
  * [1, 5, 2, 6, 3, 7, 4]	[[2, 5, 3], [4, 4, 1], [1, 7, 3]]	[5, 6, 3]
@@ -33,32 +34,37 @@ import java.util.Arrays;
 public class k번째수 {
 
     //Sol1
-    public static int[] solution(int[] array, int[][] commands) {
+    class Solution {
+        public int[] solution(int[] array, int[][] commands) {
 
-        //배열 선언하면서 크기 지정해줘야 (처음으로)
-        int[] answer = new int[commands.length];
-        int index = 0;
+            int[] answer = new int[commands.length];
 
-        for (int i = 0; i < commands.length; i++) {
-            int start = commands[i][0];
-            int end = commands[i][1];
-            int k = commands[i][2];
 
-            int[] tmp = new int[end - start + 1];
+            for (int i = 0; i < commands.length; i++) {
 
-            int a = 0;
-            for (int j = start - 1; j < end; j++)
-                tmp[a++] = array[j];
+                int start = commands[i][0] - 1;
+                int end = commands[i][1] - 1;
+                int target = commands[i][2] - 1;
 
-            Arrays.sort(tmp);
-            //배열에 어떻게 집어넣는지 잘봐
-            answer[index++] = tmp[k - 1];
+                int[] tmp = new int[end - start + 1];
+
+                for (int j = 0; j < tmp.length; j++) {
+                    tmp[j] = array[start++];
+                }
+                Arrays.sort(tmp);
+
+                int result = tmp[target];
+
+                answer[i] = result;
+
+            }
+            return answer;
         }
-        return answer;
     }
 
 
     //sol2
+
     /**
      * 암기
      * copyOfRange(배열, 시작인덱스, 종료인덱스) 메소드는 시작인덱스는 포함하고, 종료인덱스는 포함하지 않는다.
