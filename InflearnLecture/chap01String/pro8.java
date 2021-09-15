@@ -7,8 +7,10 @@ class Main{
 
     public String solution (String s){
         String answer = "NO";
+        //정규식 공부
         s = s.toUpperCase().replaceAll("[^A-Z]", "");// 대문자 A~Z까지 외에 다 제거해라
         String tmp = new StringBuilder(s).reverse().toString();
+
         if(s.equals(tmp)) answer ="YES";
 
         return answer;

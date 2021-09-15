@@ -15,6 +15,7 @@ class Main{
         for(int i=0; i<str.length()-1; i++){
             if(str.charAt(i)==str.charAt(i+1))cnt++;
             else{
+                //이쪽 밑에부분 생각 else에 추가적으로 if 또 걸 수 있다.
                 answer +=str.charAt(i);
                 if(cnt>1) answer+=String.valueOf(cnt);
                 cnt=1;
