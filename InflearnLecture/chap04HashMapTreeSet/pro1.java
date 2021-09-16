@@ -10,7 +10,7 @@ class Main{
     //switch문으로 풀기 가능
     public char solution(int N, String target){
 
-        char answer ;
+        char answer =' ';
 
         HashMap<Character, Integer> map = new HashMap<>();
         for(char x : target.toCharArray()){

@@ -25,6 +25,7 @@
    * 연속 부분 증가수열 if 후에 while쓴는 메커니즘
 4. Chap 04 HashMap
    * slidingWindow 로 푸는 방법, HashMap 메소드 활용법(equals로 객체비교 가능), TreeSet 활용법
+   * LeetCode TwoSum문제
 5. Chap 05 Stack,Queue 
    * charAt(i) String에서 적절하게 활용
 6. Chap 06 Sorting, Searching

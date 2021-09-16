@@ -9,6 +9,7 @@ class Main{
  */
     public String solution(String str){
         String answer = "";
+        //이거 index out of bound exception
         //뒤에 빈 문자 하나 추가
         str = str+" ";
         int cnt =1;
