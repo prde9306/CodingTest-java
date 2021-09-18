@@ -32,6 +32,22 @@ class Main {
         }
         return answer;
     }
+    //위랑 비슷 한 풀이
+    public int solution3(int N, int M, int[]arr){
+        int answer =0;
+        int max = Integer.MIN_VALUE;
+        int lt = 0;
+        int rt = M-1;
+        for(int i=0; i<M-1; i++){
+            answer+=arr[i];
+        }
+        while(rt<N){
+            answer+=arr[rt++];
+            max = Math.max(max, answer);
+            answer-=arr[lt++];
+        }
+        return max;
+    }
 
     public static void main(String[] args) throws IOException {
         Main T = new Main();

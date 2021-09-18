@@ -28,5 +28,41 @@ public class ContainerWithMostWater {
         }
     }
 
+    //sol2 time limit
+    class Solution {
+        public int maxArea(int[] height) {
+            int max = Integer.MIN_VALUE;
+            for(int i=0; i<height.length; i++){
+                for(int j= i+1; j<height.length; j++){
+                    int min = Math.min(height[i], height[j]);
+                    max = Math.max(max, min*(j-i));
+                }
+
+            }
+            return max;
+        }
+    }
+
+    //two pointer 로 풀어야 겠다는 생각은 함
+    class Solution{
+        public int maxArea(int[]heights){
+            int max = Integer.MIN_VALUE;
+            int lt =0;
+            int rt = heights.length-1;
+            while(lt<rt){
+                int min = Math.min(heights[lt], heights[rt]);
+                max = Math.max(max, min*(rt-lt));
+
+                //이 아래 생각 ###못해
+                if(heights[lt]<heights[rt]){
+                    lt++;
+                }else{
+                    rt--;
+                }
+            }
+            return max;
+        }
+
+    }
 
 }

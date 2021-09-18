@@ -22,11 +22,11 @@ public class AddTwoNumbers {
             if (sum >= 10) {
                 node.next = new ListNode(sum - 10);
                 carry = 1;
+
             } else {
                 node.next = new ListNode(sum);
                 carry = 0;
             }
-
             node = node.next;
         }
 

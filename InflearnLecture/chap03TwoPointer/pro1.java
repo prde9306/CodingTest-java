@@ -8,6 +8,9 @@ public class pro1 {
 
     //TwoPointersAlgorithm
     /**
+     *
+     * 왜 for 문으로 안하고 새로운 p변수를 선언해서 ++로 했는지를 잘 봐
+     *
      *  public ArrayList<Integer> solution(int N, int M, int[]arr1, int[]arr2){
      *         ArrayList<Integer> answer = new ArrayList<>();
      *
