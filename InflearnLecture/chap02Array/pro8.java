@@ -1,8 +1,9 @@
 package InflearnLecture.chap02Array;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class pro8 {
-    import java.util.Scanner;
-import java.*;
 
     class Main{
 
@@ -19,7 +20,24 @@ import java.*;
             return answer;
         }
 
-        public static void main(String[]args) throws IOException{
+            //이렇게 풀면 안된다.
+            public ArrayList<Integer> solution2(int N, int[]arr){
+
+                ArrayList<Integer> answer = new ArrayList<>();
+
+
+                for(int i=0; i<N; i++){
+                    int cnt =0;
+                    for(int j=0; j<N; j++){
+                        if(arr[i]<=arr[j])cnt++;
+                    }
+                    answer.add(cnt);
+                }
+                return answer;
+            }
+
+
+            public static void main(String[]args) throws IOException {
             Main T = new Main();
             Scanner sc = new Scanner(System.in);
             int N = sc.nextInt();

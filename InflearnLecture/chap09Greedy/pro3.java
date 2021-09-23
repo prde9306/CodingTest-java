@@ -16,7 +16,7 @@ class Time implements Comparable<Time>{
 
     @Override
     public int compareTo(Time ob){
-
+        //이거를 통해서 알파벳 e가 먼저 나오게 끔
         if(this.time ==ob.time) return this.state - ob.state;
         else return this.time - ob.time;
     }
@@ -36,7 +36,6 @@ class Main{
             else cnt--;
             answer = Math.max(answer, cnt);
         }
-
         return answer;
     }
 
