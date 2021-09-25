@@ -8,7 +8,6 @@ public class pro1 {
             int idx = i;
             for(int j=i+1; j<N; j++){
                if(arr[j]<arr[idx]) idx = j;
-
             }
             int tmp = arr[i];
             arr[i] = arr[idx];
