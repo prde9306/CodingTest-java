@@ -37,9 +37,9 @@
    * else안에 for문 +DFS- 명확히 Stack으로 그려서 확인/ 중복순열
    * 이미 갔던 길 가지 않게 끔 ch[]배열 생성해서
    * 메모이제이션 조합 풀이방식 암기 
-   * 
+   * 동전
 9. Chap 09 Greedy  
    * 객체정렬하는 방식, PriorityQueue 사용법 명확히 
-10. Chap 10
+10. Chap 10 Dynamic Programming
     * 피보나치 관련
     * 거스름 돈 : DFS, 냅색 알고리즘 구분해서 알기

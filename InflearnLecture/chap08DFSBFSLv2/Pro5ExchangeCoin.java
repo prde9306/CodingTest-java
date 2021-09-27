@@ -7,12 +7,15 @@ import java.util.Scanner;
 class Main {
     /**
      * BFS최단거리 구하는 방식으로 구하면 안되나?
+     * 송아지 찾기 문제처럼 못 푼다. check배열 만들 수 있는 단서가 없어
+     * DP랑도 연결해서 공부
      */
     static int n, m, answer = Integer.MAX_VALUE;
+
     //여기서 L이 동전 갯수
     public void DFS(int L, int sum, Integer[] arr) {
         if (sum > m) return;
-        if(L>=answer) return;
+        if (L >= answer) return;
         if (sum == m) {
             answer = Math.min(answer, L);
         } else {
@@ -82,8 +85,6 @@ class Main {
             change = sc.nextInt();
 
             T.BFS();
-
-
         }
     }
 
