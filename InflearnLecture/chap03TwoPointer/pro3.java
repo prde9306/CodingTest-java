@@ -32,7 +32,7 @@ class Main {
         }
         return answer;
     }
-    //위랑 비슷 한 풀이
+    //위랑 비슷 한 풀이 (계속 이렇게 푸네), 어쨋든 같은 풀이임
     public int solution3(int N, int M, int[]arr){
         int answer =0;
         int max = Integer.MIN_VALUE;
