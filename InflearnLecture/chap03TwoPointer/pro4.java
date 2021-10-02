@@ -8,6 +8,18 @@ class Main{
     public int solution(int N, int M, int[]arr){
         int answer=0, sum=0, lt=0;
 
+        /**
+         *
+         for(int i=0; i<N; i++){
+         if(sum > M){
+         sum-=arr[lt++];
+         }else if(sum<M){
+         sum+=arr[i];
+         }else{
+         answer++;
+         }
+         }이렇게 풀면 안되는 이유 확실히 알기
+         */
         //뒤에꺼를 계속 움직여야 한다.
         for(int rt =0; rt<N; rt++){
             sum +=arr[rt];
