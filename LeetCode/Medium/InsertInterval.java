@@ -1,60 +1,77 @@
 package LeetCode.Medium;
 //거의 다 푼 것 같은데
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+
 class Solution {
-
-    // 처음끼기 직전까지는 intervals 그대로 놔두기
-    // newInterval시작점을  interval어디 사이에 처음으로 끼나비교 && 끝점을 어디마지막까지 끼나 비교?
-    // 끝점이 다음 intervals 사이라면 시작점부터 그점까지 합치기
-
-
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        int start = newInterval[0];
-        int end = newInterval[1];
-        int first =0;
-        int last =0;
 
-        for(int i=0; i<intervals.length; i++){
-            if(intervals[i][0]<= start && start<=intervals[i][1]){
-                first =i;
+        if(intervals.length == 0) return new int[][] { newInterval }; //Edge case
+
+        List<int[]> list = new ArrayList<>();
+
+        boolean isAvailable = true;
+
+        for(int i=0; i<intervals.length; i++) {
+
+            //newinterval 겹치는 뒷 부분 넣는 것
+            int[] nowInterval = intervals[i];
+
+            if(!isAvailable) {
+                list.add(nowInterval);
+                continue;
             }
 
-            if(intervals[i][0]<=end && end<=intervals[i][1]){
-                last =i;
+            if(nowInterval[0] > newInterval[1]) {
+                list.add(nowInterval);
+                continue;
+            }
+            //앞부분 겹치기 전 앞 부문 넣는 것
+
+            if(nowInterval[1] < newInterval[0]) list.add(nowInterval);
+
+                //겹친다면~
+            else { //nowInterval[1] >= newInterval[0]
+
+                isAvailable = false;
+                int tempLeft = Math.min(nowInterval[0], newInterval[0]);
+                int tempRight = Math.max(nowInterval[1], newInterval[1]);
+
+                //ㅇㅓ디까지 겹치는지 확인
+                for(int j=i+1; j<intervals.length; j++) {
+
+                    i++;
+
+                    int[] nextInterval = intervals[j];
+
+                    if(nextInterval[0] > tempRight) {
+                        i--;
+                        break;
+                    }
+                    else tempRight = Math.max(tempRight, nextInterval[1]);
+                }
+
+                list.add(new int[] { tempLeft, tempRight });
             }
         }
-        int len =0;
-        if(first==0 && last==intervals.length-1){
-            len = intervals.length;
-        }else if(first==0 && last !=intervals.length){
-            len = 2+ intervals.length-last;
-        }else if(first!=0 && last==intervals.length-1){
-            len = first+2;
-        }else{
-            len = 1+first+1 + intervals.length-last;
+
+        if(isAvailable) {
+            list.add(newInterval);
         }
 
-        int[][] answer = new int[len][2];
+        int[][] result = list.toArray(new int[][]{new int[list.size()]});
 
-
-        //i-1까지는 그대로 넣어주기
-        for(int i=0; i<=first-1; i++){
-            for(int j=0; j<2; j++){
-                answer[i][j]= intervals[i][j];
+        Arrays.sort(result, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[0] - o2[0];
             }
-        }
-        //
-        answer[first][0]= intervals[first][0];
-        answer[first][1]= Math.max(intervals[last][1], newInterval[1]);
+        });
 
-        //그 뒤에
-        for(int i=last+1; i<intervals.length; i++){
-            for(int j=0; j<2; j++){
-                answer[i][j]= intervals[i][j];
-            }
-        }
-
-        return answer;
+        return result;
     }
-
 }

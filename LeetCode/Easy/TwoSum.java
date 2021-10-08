@@ -39,27 +39,8 @@ public class TwoSum {
                     map.put(target - nums[i], i);
                 }
             }
+            Integer.MAX_VALUE
             return new int[]{1, 2};
         }
     }
-
-    //sol 3  이렇게도 된다.
-        public int[] twoSum(int[] nums, int target) {
-            int[]answer = new int[2];
-            // int lt =0;
-            // int rt = nums.length-1;
-
-            for(int i=0; i<nums.length; i++){
-                for(int j=i+1; j<nums.length; j++){
-                    if(nums[i]+nums[j]==target){
-                        answer[0]=i;
-                        answer[1]=j;
-                    }
-                }
-
-            }
-            return answer;
-        }
-
-
 }
