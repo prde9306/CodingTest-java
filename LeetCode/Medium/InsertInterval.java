@@ -8,6 +8,7 @@ import java.util.List;
 
 
 class Solution {
+
     public int[][] insert(int[][] intervals, int[] newInterval) {
 
         if(intervals.length == 0) return new int[][] { newInterval }; //Edge case
