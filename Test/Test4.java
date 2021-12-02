@@ -8,21 +8,15 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Test4 {
+public class Main {
     //출력초과
     public static void main(String[]args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        String []arr1 = br.readLine().split(" ");
-        HashSet<String> hs = new HashSet<>(Arrays.asList(arr1));
+    
+        String catCdStr = "C008000";
 
-        int M = Integer.parseInt(br.readLine());
-        String[]arr2 = br.readLine().split(" ");
+         catCdStr = catCdOfFinalBigCategory.split("C")[1].split("000")[0];
 
-        if(hs.cotains(arr2)){
-            System
-        }
-
+         System.out.println(catCdStr);
 
     }
 }
