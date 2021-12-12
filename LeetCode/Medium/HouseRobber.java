@@ -25,4 +25,49 @@ public class HouseRobber {
     }
 }
      */
+
+    /*
+    class Solution {
+    public int rob(int[] nums) {
+        int answer;
+        int sum;
+
+        //그냥 이중 포문 돌려서 1칸 건너 뛰고 더하기 해서 max값
+        for(int i=0; i<nums.length; i++){
+            sum=nums[i];
+            for(int j=i+1; j<nums.length; j++){
+                sum +=nums[j];
+            }
+            answer = sum
+        }
+}
+     */
+
+    /*
+    class Solution {
+    public int rob(int[] nums) {
+        int answer;
+        int sum;
+        int max = 0;
+
+        //그냥 이중 포문 돌려서 1칸 건너 뛰고 더하기 해서 max값
+        if(nums.length==1) return nums[0];
+        if(nums.length==2){
+            return Math.max(nums[0], nums[1]);
+        }
+
+        for(int i=0; i<nums.length; i++){
+            sum=nums[i];
+            for(int j=i+2; j<nums.length; j++){
+                sum +=nums[j];
+                for(int k=j+1; k<nums.length; k+=2){
+                    sum+=nums[k];
+                }
+            }
+            max = Math.max(sum, max);
+        }
+        return max;
+}
+}
+     */
 }
