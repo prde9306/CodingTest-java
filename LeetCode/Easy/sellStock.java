@@ -41,8 +41,7 @@ class sellStock {
     // binarySearch - 오름차순, 내림차순으로 정렬 불가 따라서 binarySearch는 안 될 듯 00
 
     //
-    class Solution {
-        public int maxProfit(int[] prices) {
+        public int maxProfit3(int[] prices) {
             int min_num = Integer.MAX_VALUE;
             int max_num = Integer.MIN_VALUE;
             int min_index = -1;
@@ -59,6 +58,5 @@ class sellStock {
             }
             return res;
         }
-    }
 
 }
