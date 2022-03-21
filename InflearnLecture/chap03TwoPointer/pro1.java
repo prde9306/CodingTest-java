@@ -63,11 +63,74 @@ public class pro1 {
             for(int j=0; j<M; j++){
                 arr2[j] = sc.nextInt();
             }
+
             for(int x : T.solution(N, M, arr1, arr2)){
                 System.out.print(x+" ");
             }
 
         }
     }
+
+
+    class Main{
+
+        public int[] solution(int N, int M, int[]arr1, int[]arr2){
+            int []answer = new int[N+M];
+
+            for(int i=0; i<N; i++){
+                answer[i]= arr1[i];
+            }
+            for(int j=N; j<N+M; j++){
+                answer[j]= arr2[j];
+            }
+            Arrays.sort(answer);
+
+            return answer;
+        }
+
+        public static void main(String[]args)throws IOException {
+            Main T = new Main();
+
+            Scanner sc = new Scanner(System.in);
+            int N = sc.nextInt();
+            int []arr1 = new int[N];
+
+            for(int i=0; i<N; i++){
+                arr1[i] = sc.nextInt();
+            }
+
+            int M = sc.nextInt();
+            int []arr2 = new int[M];
+
+            for(int j=0; j<M; j++){
+                arr2[j] = sc.nextInt();
+            }
+
+            for(int x : T.solution(N, M, arr1, arr2)){
+                System.out.print(x+" ");
+            }
+
+        }
+
+        //이렇게 풀어도 될 듯?
+        public int[] solution (int N, int M, int[]arr1, int[]arr2){
+
+            int [] answer = new int[N+M];
+
+            for(int i=0; i< N; i++){
+                if(arr1[i]>=arr2[i]){
+                    answer[i]=arr1[i];
+                }else{
+                    answer[i]=arr2[i];
+                }
+            }
+            for(int j=N; j<M; j++){
+                answer[j]=arr2[j];
+            }
+        return answer;
+
+        }
+    }
+
 
 }
